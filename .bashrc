@@ -1,4 +1,6 @@
-# curl -O https://raw.githubusercontent.com/MrTakashi/bash-scripts/master/change-hostname.sh
+
+###########################################################################################
+# curl https://raw.githubusercontent.com/MrTakashi/bash-scripts/master/.bashrc >> ~/.bashrc
 
 ###### mk settings for history
  # don't put lines starting with space in the history
