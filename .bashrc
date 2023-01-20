@@ -5,7 +5,8 @@
 ###### mk settings for history
  # don't put lines starting with space in the history
  # and don't put the same as the most recent command used
- HISTCONTROL=ignorespace:ignoredups
+ HISTCONTROL=ignorespace
+ # HISTCONTROL=ignorespace:ignoredups
 
  # append to the history file, don't overwrite it
  shopt -s histappend
