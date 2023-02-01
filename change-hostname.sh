@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ###########################################################################################
-# curl -s https://raw.githubusercontent.com/MrTakashi/bash-scripts/master/change-hostname.sh | bash -s new-name
 # wget -qO - https://raw.githubusercontent.com/MrTakashi/bash-scripts/master/change-hostname.sh | bash -s new-name
+# curl -s https://raw.githubusercontent.com/MrTakashi/bash-scripts/master/change-hostname.sh | bash -s new-name
 
 
 if [ -z "$1" ]; then

@@ -1,5 +1,6 @@
 
 ###########################################################################################
+# wget -qO - https://raw.githubusercontent.com/MrTakashi/bash-scripts/master/.bashrc >> ~/.bashrc
 # curl https://raw.githubusercontent.com/MrTakashi/bash-scripts/master/.bashrc >> ~/.bashrc
 
 ###### mk settings for history
