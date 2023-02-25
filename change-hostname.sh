@@ -21,13 +21,16 @@ else
     printf "### try to update /etc/hosts with command: sed -i.bak -r s/^127.0.1.1.*/127.0.1.1\t%s.local\t%s/ /etc/hosts" "$1" "$1"
     sed -i.bak -r "s/^127.0.1.1.*/127.0.1.1\t$1.local\t$1/" /etc/hosts
     echo
+    echo "### Checking result ###"
     echo "cat /etc/hosts"
     cat /etc/hosts
     echo
     echo "If all seems correct, run:"
     echo "# shutdown -r now"
     echo
-    echo "May be you need to generate new machine-id:"
+    echo "### After all ###"
+    echo
+    echo "### May be you need to generate new machine-id:"
     echo "# cat /etc/machine-id"
     echo "# rm -f /etc/machine-id"
     echo "# dbus-uuidgen --ensure=/etc/machine-id"
