@@ -35,7 +35,8 @@ else
     echo "grep Server= /etc/zabbix/zabbix_agent2.conf"
     grep Server= /etc/zabbix/zabbix_agent2.conf
     echo
-    echo "### Aftera all ###"
+    echo "### After all ###"
+    echo
     echo "If all seems correct, run:"
     echo "# systemctl restart zabbix-agent2"
     echo "# zabbix_agent2 -p"
