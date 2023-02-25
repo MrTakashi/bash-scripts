@@ -6,12 +6,12 @@
 
 
 if [ -z "$1" ]; then
-    echo "[Host name changer script]"
+    echo "[Host name changing script]"
     echo
     echo "Usage: $0 <new-hostname>"
     echo
     echo "script will execute <hostnamectl set-hostname new-hostname>>"
-    echo "and do changes in /etc/hosts"
+    echo "and do changes in /etc/hosts with sed -i.bak"
 else
     echo
     echo "### try to set new hostname with command: hostnamectl set-hostname $1"
@@ -26,7 +26,13 @@ else
     echo "cat /etc/hosts"
     cat /etc/hosts
     echo
-    echo "If all seems correct, run: shutdown -r now"
+    echo "If all seems correct, run:"
+    echo "# shutdown -r now"
+    echo
+    echo "May be you need to generate new machine-id:"
+    echo "# cat /etc/machine-id"
+    echo "# rm -f /etc/machine-id"
+    echo "# dbus-uuidgen --ensure=/etc/machine-id"
     echo
 fi
 
