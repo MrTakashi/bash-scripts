@@ -26,9 +26,16 @@ else
     sed -i -r "s/^Hostname=.*/Hostname=$1/" /etc/zabbix/zabbix_agent2.conf
     echo
     printf "### try to update /etc/zabbix/zabbix_agent2.conf with command: sed -r s/^Server=.*/Server=%s/ /etc/zabbix/zabbix_agent2.conf" "$2"
-    sed -i r "s/^Server=.*/Server=$1/" /etc/zabbix/zabbix_agent2.conf
+    sed -i r "s/^Server=.*/Server=$2/" /etc/zabbix/zabbix_agent2.conf
     echo
+    echo "### Checking result ###"
     echo
+    echo "grep Hostname= /etc/zabbix/zabbix_agent2.conf"
+    grep Hostname= /etc/zabbix/zabbix_agent2.conf
+    echo "grep Server= /etc/zabbix/zabbix_agent2.conf"
+    grep Server= /etc/zabbix/zabbix_agent2.conf
+    echo
+    echo "### Aftera all ###"
     echo "If all seems correct, run:"
     echo "# systemctl restart zabbix-agent2"
     echo "# zabbix_agent2 -p"
