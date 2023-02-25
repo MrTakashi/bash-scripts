@@ -37,7 +37,7 @@ else
     echo
     echo "### After all ###"
     echo
-    echo "If all seems correct, run:"
+    echo "# If all seems correct, run:"
     echo "# systemctl restart zabbix-agent2"
     echo "# zabbix_agent2 -p"
     echo "# tail -f /var/log/zabbix/zabbix_agent2.log"
