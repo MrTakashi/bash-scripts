@@ -32,8 +32,8 @@ else
     echo
     echo "### May be you need to generate new machine-id:"
     echo "# cat /etc/machine-id"
-    echo "# rm -f /etc/machine-id"
-    echo "# dbus-uuidgen --ensure=/etc/machine-id"
+    echo "# rm -f /etc/machine-id && dbus-uuidgen --ensure=/etc/machine-id""
+    echo "#
     echo
 fi
 
