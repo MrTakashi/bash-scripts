@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###########################################################################################
-# wget -qO - https://raw.githubusercontent.com/MrTakashi/bash-scripts/master/change-zabbix-agent2-settings.sh | bash -s %new_Hostname=% %new_Server=%
+# wget -qO - https://raw.githubusercontent.com/MrTakashi/bash-scripts/master/change-zabbix-agent2-settings.sh | bash -s `uname -n` 10.10.20.120
 
 
 if [ -z "$1" ]; then
