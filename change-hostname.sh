@@ -32,8 +32,11 @@ else
     echo
     echo "### May be you need to generate new machine-id:"
     echo "# cat /etc/machine-id"
-    echo "# rm -f /etc/machine-id && dbus-uuidgen --ensure=/etc/machine-id""
-    echo "#
+    echo "# rm -f /etc/machine-id && dbus-uuidgen --ensure=/etc/machine-id"
+    echo
+    echo "### May be you need to setup zabbix-agent2:"
+    # shellcheck disable=SC2006
+    echo "# wget -qO - https://raw.githubusercontent.com/MrTakashi/bash-scripts/master/change-zabbix-agent2-settings.sh | bash -s `uname -n` 10.10.20.120"
     echo
 fi
 
