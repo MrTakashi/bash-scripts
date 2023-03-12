@@ -34,7 +34,7 @@ else
     grep Hostname= /etc/zabbix/zabbix_agent2.conf
     echo "grep Server= /etc/zabbix/zabbix_agent2.conf"
     grep Server= /etc/zabbix/zabbix_agent2.conf
-    echo "grep Server= /etc/zabbix/zabbix_agent2.conf"
+    echo "grep ServerActive= /etc/zabbix/zabbix_agent2.conf"
     grep ServerActive= /etc/zabbix/zabbix_agent2.conf
     echo
     echo "### After all ###"
