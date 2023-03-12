@@ -5,14 +5,14 @@
 
 
 if [ -z "$1" ]; then
-    echo "[Zabbix agent2 Hostname= and Server= settings changing script]"
+    echo "[ Zabbix agent2 Hostname= and Server= settings changing script ]"
     echo
     echo "Usage: $0 %new_Hostname% %new_Server%"
     echo
     echo "script will execute:"
     echo "cp /etc/zabbix/zabbix_agent2.conf /etc/zabbix/zabbix_agent2.conf.bak"
-    echo "sed -r 's/^Hostname=.*/Hostname=%s/' /etc/zabbix/zabbix_agent2.conf" "$1"
-    echo "sed -r 's/^Server=.*/Server=%s/' /etc/zabbix/zabbix_agent2.conf" "$2"
+    echo "sed -i -r 's/^Hostname=.*/Hostname=%s/' /etc/zabbix/zabbix_agent2.conf" "$1"
+    echo "sed -i -r 's/^Server=.*/Server=%s/' /etc/zabbix/zabbix_agent2.conf" "$2"
 else
     echo
     echo "cp /etc/zabbix/zabbix_agent2.conf /etc/zabbix/zabbix_agent2.conf.bak"
@@ -34,6 +34,8 @@ else
     grep Hostname= /etc/zabbix/zabbix_agent2.conf
     echo "grep Server= /etc/zabbix/zabbix_agent2.conf"
     grep Server= /etc/zabbix/zabbix_agent2.conf
+    echo "grep Server= /etc/zabbix/zabbix_agent2.conf"
+    grep ServerActive= /etc/zabbix/zabbix_agent2.conf
     echo
     echo "### After all ###"
     echo
